@@ -1,47 +1,30 @@
+import { Column } from "./Table/EditableTable";
+
 export const dataSource = [
   {
     key: 1,
-    name: 'Mike',
-    age: 32,
-    address: '10 Downing Street',
+    en: 'milk',
+    ar: "لبن",
   },
-  
 ];
-export const columns1 = [
+export const columns1: Column[] = [
+  // { title: "created at", dataIndex: "createdAt"},
   {
-    title: 'name',
+    title: 'Name',
     dataIndex: 'name',
-    width: '25%',
+    width: '30%',
     editable: true,
   },
   {
-    title: 'age',
+    title: 'Age',
     dataIndex: 'age',
-    width: '15%',
+    width: '20%',
     editable: true,
   },
   {
     title: 'address',
     dataIndex: 'address',
-    width: '40%',
+    // width: '40%',
     editable: true,
-  },
-];
-export const columns2 = [
-  {
-    title: 'speciality',
-    dataIndex: 'speciality',
-    key: 'speciality',
-    editable: true,
-  },
-  {
-    title: 'icon',
-    dataIndex: 'icon',
-    key: 'icon',
-  },
-  {
-    title: 'English',
-    dataIndex: 'eng-language',
-    key: 'English',
   },
 ];

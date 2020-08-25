@@ -5,7 +5,7 @@ import { Item } from './EditableTable';
 export const EditButton = (selectedRow: Item | null, key: React.Key | undefined, isEditing: boolean, edit: (record: Item) => void, save: (key: React.Key | undefined) => Promise<void>, cancel: () => void) => {
   if (selectedRow && !isEditing) {
     return (
-      <Button type="link" onClick={() => edit(selectedRow)} style={{ marginBottom: 16 }}>
+      <Button disabled={!Boolean(selectedRow)} type="link" onClick={() => edit(selectedRow)} style={{ marginBottom: 16 }}>
         Edit a row
       </Button>
     )

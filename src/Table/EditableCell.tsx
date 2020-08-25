@@ -11,7 +11,9 @@ export interface EditableCellProps extends React.HTMLAttributes<HTMLElement> {
   index: number;
   children: React.ReactNode;
 }
-export const EditableCell: React.FC<EditableCellProps> = ({ editing, dataIndex, title, inputType, record, index, children, ...restProps }) => {
+export const EditableCell: React.FC<EditableCellProps> = ({
+  editing, dataIndex, title, inputType, record, index, children, ...restProps
+}) => {
   const inputNode = inputType === 'number' ? <InputNumber /> : <Input />;
   return (
     <td {...restProps}>
